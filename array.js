@@ -4,16 +4,16 @@
 
 //create a new array
 
-var points=[];
+var points = [];
 
 //check array methods: https://www.w3schools.com/jsref/jsref_obj_array.asp
 //array methods
 
 //1.concat: used to join two or more arrays;
-var kasi=["kasi","ajsi",2,3,4,5,6,7,8,89];
-var ks = [3,4,5,"p"];
-var js = ["ajsi",2,4];
-var ts=js.concat(ks,kasi);
+var kasi = ["kasi", "ajsi", 2, 3, 4, 5, 6, 7, 8, 89];
+var ks = [3, 4, 5, "p"];
+var js = ["ajsi", 2, 4];
+var ts = js.concat(ks, kasi);
 console.log(ts);
 
 //2.copywithin: The copyWithin() method copies array elements to another position in the array, overwriting the existing values.
@@ -38,7 +38,7 @@ console.log(ts);
 
 //slice
 
-points=[5,6,7,8,9,0,10];
+points = [5, 6, 7, 8, 9, 0, 10];
 var result = points.slice(1, 3);
 
-console.log(points);console.log(result);
+console.log(points); console.log(result);
