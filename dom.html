@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <style>
+        article{
+             border: 2px solid red;
+             margin: 3px;
+             border-radius: 3px;
+        }
+       
+        
+    </style>
+</head>
+<body>
+    <h1>kaid</h1>
+    <p id="FIRST">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam, voluptate.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    <p>DOM=> Document object model</p>
+    <article>
+        <h3>
+            Author-1
+            <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid, exercitationem alias! Laudantium corporis eum, nulla aspernatur tempora vitae reiciendis? Consectetur quibusdam ullam quasi dolores dolorem nam perferendis repellendus tempora sequi!</p>
+        </h3>
+    </article>
+    <article>
+        <h3>
+            Author-2
+            <p class="description">Voluptas reprehenderit harum dignissimos! Rem reiciendis adipisci velit doloribus eveniet aliquid placeat nulla in repellendus illo, temporibus ea quibusdam fugit recusandae numquam quia deleniti! Ratione eligendi laboriosam sunt molestiae expedita.</p>
+        </h3>
+    </article>
+    <article>
+        <h3>
+            Author-3
+            <p class="description">Ut neque provident libero porro earum voluptate reprehenderit iure accusamus, id ipsam rem aliquid minus voluptatem sunt, dolores ab non dolorum. A eum minus laboriosam voluptatibus debitis adipisci in possimus.</p>
+        </h3>
+    </article>
+    <script>
+        var hello=document.getElementsByTagName('p');
+        //getElements by Tag Name
+        var first=document.getElementById('FIRST');
+        first.style.backgroundColor="red";
+        first.style.color="yellow";
+        first.style.fontSize="34px";
+        var classGame=document.getElementsByClassName('description');
+        console.log(classGame);
+        for(let i=0;i<classGame.length;i++){
+            console.log(classGame[i]);
+           
+            classGame[i].style.margin = "20px";
+             classGame[i].style.backgroundColor = "green";
+             console.log(classGame[i].innerHTML);
+             classGame[i].innerHTML="kasi "+(i+1);
+        }
+    </script>
+</body>
+</html>

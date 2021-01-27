@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>EVENT</title>
+</head>
+<body>
+    <h1 onmouseover="dontGo()">Exploring Events</h1>
+    <button onclick="hello()">Click me-0</button>
+    <button id="second">click me-1</button>
+    <button id="third">click me-2</button>
+    <button id="4">click me-3</button>
+    <script>
+        //h1;
+        function hello(){
+           alert("hello world");
+        }
+        //0
+        function dontGo(){
+            console.log("don't go");
+            console.log(new Date);
+        }
+        //1 process .mostly use
+        document.getElementById('second').addEventListener('click',
+        function () { document.body.style.color="red";
+        })
+        //2 mostly use 2;
+        let clickThird=document.getElementById('third');
+        function bacGroundColor() {
+            document.body.style.backgroundColor="cyan";
+            
+        }
+        clickThird.addEventListener('click',bacGroundColor);
+        //4 used in most
+        document.getElementById('4').addEventListener('click',function(){  document.body.style.fontSize="50px"})
+
+        
+
+            
+        
+    </script>
+   
+      
+</body>
+</html>

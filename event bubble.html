@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubble</title>
+</head>
+<body>
+    <h1>My list</h1>
+    <div id="container">
+        <ul id="myList">
+            <li class="item" id="first">Lorem ipsum dolor sit amet.</li>
+            <li class="item" id="second">Lorem ipsum dolor sit amet.</li>
+            <li class="item">Lorem ipsum dolor sit amet.</li>
+            <li class="item">Lorem ipsum dolor sit amet.</li>
+            <li class="item">Lorem ipsum dolor sit amet.</li>
+        </ul>
+        <button id="button">Add new element</button>
+    </div>
+     <script>
+//         document.getElementById('first').addEventListener('click',function(){
+//              console.log('first item clicked');
+//              //event.stopImmediatePropagation();
+//              event.stopPropagation();
+//              
+//         });
+//         document.getElementById('second').addEventListener('click', function () {
+//                 console.log('first item clicked');
+//               event.stopImmediatePropagation();
+//                 event.stopPropagation();
+// 
+//             });
+//         document.getElementById('myList').addEventListener('click', function () {
+//                 console.log('ul item clicked');event.stopPropagation();
+//         })
+//         document.getElementById('container').addEventListener('click', function () {
+//                 console.log('container clicked');
+//         })
+            document.getElementById('myList').addEventListener('click',function() {
+            event.target.parentNode.removeChild(event.target);
+                
+            })
+            document.getElementById('button').addEventListener('click',function(){
+            var newItem=document.createElement('li');
+            newItem.innerText="Brand New Element";
+            document.getElementById('myList').appendChild(newItem);
+            })
+
+     </script>
+</body>
+</html>
